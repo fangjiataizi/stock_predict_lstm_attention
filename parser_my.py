@@ -20,6 +20,7 @@ parser.add_argument('--useGPU', default=False, type=bool) #是否使用GPU
 parser.add_argument('--batch_first', default=True, type=bool) #是否将batch_size放在第一维
 parser.add_argument('--dropout', default=0.1, type=float)
 parser.add_argument('--save_file', default='model/stock.pkl') # 模型保存位置
+parser.add_argument('--save_file_RNN', default='model/RNN_stock.pkl') # 模型保存位置
 
 
 # args = parser.parse_args()
