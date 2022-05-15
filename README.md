@@ -20,7 +20,18 @@ parsermy.py : 常用参数
 train.py：模型训练
 
 # 运行方法：
+LSTM:
 
-        直接运行train.py开始模型训练
+直接运行train.py开始模型训练
 
-        直接运行evaluate.py开始模型预测
+直接运行evaluate.py开始模型预测
+
+RNN_BASE:
+
+直接运行train_RNN.py开始模型训练
+
+直接运行evaluate_RNN.py开始模型预测
+
+MLP:
+    
+运行 MLP.py
