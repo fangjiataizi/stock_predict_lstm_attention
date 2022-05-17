@@ -21,6 +21,8 @@ parser.add_argument('--batch_first', default=True, type=bool) #是否将batch_si
 parser.add_argument('--dropout', default=0.1, type=float)
 parser.add_argument('--save_file', default='model/stock.pkl') # 模型保存位置
 parser.add_argument('--save_file_RNN', default='model/RNN_stock.pkl') # 模型保存位置
+parser.add_argument('--save_file_DARNN_dec', default='model/DARNN_dec.pkl') # 模型保存位置
+parser.add_argument('--save_file_DARNN_enc', default='model/DARNN_enc.pkl') # 模型保存位置
 
 
 # args = parser.parse_args()

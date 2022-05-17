@@ -35,3 +35,9 @@ RNN_BASE:
 MLP:
     
 运行 MLP.py
+
+DA_RNN:
+    
+直接运行train_DARNN.py开始模型训练
+
+直接运行evaluate_DARNN.py开始模型预测
