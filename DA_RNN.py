@@ -24,7 +24,7 @@ use_cuda = torch.cuda.is_available()
 # logger.info("Is CUDA available? %s.", use_cuda)
 
 
-
+#编码器类--RNN模型
 class encoder(nn.Module):
     def __init__(self, input_size, hidden_size, T, logger):
         # input size: number of underlying factors (81)
@@ -74,6 +74,7 @@ class encoder(nn.Module):
         # No matter whether CUDA is used, the returned variable will have the same type as x.
         return Variable(x.data.new(1, x.size(0), self.hidden_size).zero_()) # dimension 0 is the batch dimension
 
+#解码器类-RNN模型
 class decoder(nn.Module):
     def __init__(self, encoder_hidden_size, decoder_hidden_size, T, logger):
         super(decoder, self).__init__()
@@ -125,7 +126,7 @@ class decoder(nn.Module):
     def init_hidden(self, x):
         return Variable(x.data.new(1, x.size(0), self.decoder_hidden_size).zero_())
 
-# Train the model
+# 包括编码解码器双向RNN设计模型，包括训练和预测的方法实现
 class da_rnn:
     def __init__(self, file_data, logger, encoder_hidden_size = 64, decoder_hidden_size = 64, T = 10,
                  learning_rate = 0.01, batch_size = 128, parallel = True, debug = False):

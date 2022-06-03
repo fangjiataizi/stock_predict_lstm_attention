@@ -4,7 +4,7 @@ import torch
 parser = argparse.ArgumentParser()   #创建一个解析对象
 
 # parser.add_argument('--corpusFile', default='data/000001SH_index.csv')  #向该对象中添加你要关注的命令行参数和选项
-parser.add_argument('--corpusFile', default='data/btc.csv')
+parser.add_argument('--corpusFile', default='data/doge.csv')
 
 # TODO 常改动参数
 parser.add_argument('--gpu', default=0, type=int) # gpu 卡号
@@ -15,7 +15,9 @@ parser.add_argument('--input_size', default=5, type=int) #输入特征的维度
 parser.add_argument('--hidden_size', default=32, type=int) #隐藏层的维度
 parser.add_argument('--lr', default=0.0001, type=float) #learning rate 学习率
 parser.add_argument('--sequence_length', default=5, type=int) # sequence的长度，默认是用前五天的数据来预测下一天的收盘价
-parser.add_argument('--batch_size', default=1, type=int)
+# parser.add_argument('--batch_size', default=1, type=int)
+parser.add_argument('--batch_size', default=100, type=int)
+
 parser.add_argument('--useGPU', default=False, type=bool) #是否使用GPU
 parser.add_argument('--batch_first', default=True, type=bool) #是否将batch_size放在第一维
 parser.add_argument('--dropout', default=0.1, type=float)

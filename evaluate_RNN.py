@@ -23,8 +23,9 @@ def eval():
         else:
             x = x.squeeze(1)
         pred = model(x)
+        print('pred:',pred)
         list = pred.data.squeeze(1).tolist()
-        preds.extend(list[-1])
+        preds.extend(list)
         labels.extend(label.tolist())
 
     result_t = []
